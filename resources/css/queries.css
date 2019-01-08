@@ -1,0 +1,133 @@
+/* Big tablets to 1200px (widths smaller than the 1140px row */
+@media only screen and (max-width: 1200px){
+
+}
+
+
+/* Small tablet to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1023px){
+    
+}
+
+/* Small phones small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px){
+}
+
+/* Screen limit for mobile nav and JS animations */
+@media only screen and (max-width: 620px)
+ {
+     #logo { display: none; }
+     
+     #circle-text { display: none; }
+     
+     .hidden-nav { display: none; }
+     
+     .mobile-nav-icon {
+         display: inline-block;
+         font-size: 15px;
+     }
+    
+     .sticky .main-nav li a{
+         margin-right: 500px;
+     }
+     
+     .sticky .main-nav li{
+         padding-right: 20px;
+         font-weight: 400;
+         font-size: 100%;
+         margin: 5%;
+     }
+}
+
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 620px)
+ {
+     .home-content { 
+         position: relative; 
+         top: 35%;
+         margin-left: -4%;
+     }
+     
+     #js--home-nav .mobile-nav-icon{
+         display: none;
+     }
+     #js--home-nav .hidden-nav {
+         font-size: 120%;
+         display: block;
+         width: 120%;
+         margin-top: 20%;
+         margin-left: -7%;
+     }
+     
+     #js--sticky-nav .mobile-nav-icon{
+         display: block;
+     }
+     
+     /*---------Portfolio-Mobile--------*/
+     #portfolio-section h1 {
+         font-size: 50px;
+     }
+    
+    .portfolio__entry{
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+     
+     .portfolio__entry h3{
+         font-size: 25px;
+         padding: 4% 0;
+     }
+    
+    .entry__img{
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+    }
+    
+    .entry__content{
+        font-size: 150%;
+        padding-bottom: 25px;
+    }
+     
+     .entry__links {
+         border-radius: 0 0 5px 5px;
+     }
+    
+    .entry__links h3 {
+        padding: 4% 0;
+     }
+     
+    .entry__links ul{
+        font-size: 150%;
+        padding-top: 0;
+     }
+     
+     
+     /*---------About-Mobile--------*/
+     .profile {
+         flex-direction: column;
+         padding-top: 30px;
+     }
+     
+     .profile__img img {
+         width: 45%;
+     }
+     
+     .profile__links {
+        text-align: right;
+        margin: 5% 10% 0 0;
+     }
+     
+     .resume-btn {
+         font-size: 20px;
+         padding: 2% 4%;
+     }
+     
+     .profile__bio {
+         font-size: 150%;
+         padding-bottom: 20px;
+         border-right: 0px;
+         border-bottom:4px solid black;
+         border-radius: 0px;
+     }
+}
