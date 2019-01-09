@@ -82,35 +82,32 @@
 /*----------------------Circle text animation---------------------------*/
      const circleType = new CircleType(document.getElementById('circle-text'));
      
-/*----------------------------Tag Cloud---------------------------------*/
-     $("#tags a").tagcloud({
-         size: {
-             start: 12,
-             end: 28,
-             unit: '%'
-         },
-         color: {
-             start: '#555',
-             end: '#a00'
-         }
-     })
+/*----------------------------Tag Cloud---------------------------------*/   
+     var words = [
+        {text: "Python", weight: 13},
+        {text: "Java", weight: 10.5},
+        {text: "HTML", weight: 9.4},
+        {text: "CSS", weight: 8},
+        {text: "Angular", weight: 6.2},
+        {text: "JavaScript", weight: 5},
+        {text: "MySQL", weight: 5},
+        {text: "NoSQL", weight: 5},
+        {text: "Eclipse", weight: 5},
+        {text: "NetBeans", weight: 5},
+        {text: "C", weight: 5}];
+
+        $('#tags').jQCloud(words);
      
-/*---------------------------Portfolio-Slideshow------------------------------*/
-     var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("slides");
-  if (n > x.length) {slideIndex = 1} 
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none"; 
-  }
-  x[slideIndex-1].style.display = "block"; 
-}
 });
+
+/*---------------------------Portfolio-Slideshow------------------------------*/
+function setEntry(n, m) {
+                $(".portfolio__nav_thumb").each(function() {
+                    $(this).removeClass("portfolio__nav_selected");
+                });
+                $(n).addClass("portfolio__nav_selected");
+                $(".portfolio__entry").each(function() {
+                    $(this).removeClass("current_entry");
+                });
+                $(m).addClass("current_entry");
+            }

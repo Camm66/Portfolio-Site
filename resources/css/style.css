@@ -41,6 +41,16 @@ h1 {font-weight: 400;}
 
 h2 {font-weight: 300;}
 
+a {
+    color: #b10235;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #3c3c3c;
+    text-decoration: underline;
+}
+
 section { 
     padding: 10px; 
     position: relative;
@@ -60,6 +70,27 @@ section {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
+.link-btn {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    text-align:center;
+    float: right;
+    background-color: rgb(60, 60, 60);
+    padding: 5px 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    border-radius: 500px;
+}
+
+.disabled-btn,
+.link-btn:hover {
+    opacity: 0.7;
+}
+
+.disabled-btn { cursor: none; }
 
 /*-----------------------------------------*/
 /*--------------HEADER-SECTION-------------*/
@@ -138,7 +169,7 @@ section {
     position: fixed;
     top: 0;
     right: 0%;
-    width: 40%;
+    width: 35%;
     background-color: rgba(255, 255, 255, 0.93);
     border-radius: 0 0 0 3px;
     box-shadow: 0 1px 1px #4a4a4a;
@@ -180,7 +211,7 @@ section {
 
 /*------Rotating-Text------*/
 #circle-text {
-    font-size: 70%;
+    font-size: 20px;
     color: #b10235;
     position: relative;
     flex: 0 1 auto;
@@ -257,13 +288,14 @@ section {
 
 #portfolio-section {
     background-color: #2f2f2f;
+    overflow: hidden;
 }
 
 #portfolio-section h1 {
     color: #fff;
-    font-size: 450%;
+    font-size: 300%;
     font-weight: 900;
-    margin: 2% 0 2% 5%;
+    margin: 0 0 0 5%;
     animation-delay: 0.3s;
 }
 
@@ -271,7 +303,7 @@ section {
 .portfolio {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
     margin: 0 auto;
     animation-delay: .5s;
 }
@@ -279,17 +311,20 @@ section {
 /*--------Portfolio-Boxes--------*/
 
 .portfolio__entry {
-    font-size: 90%;
+    font-size: 80%;
     color: rgb(60, 60, 60);
     width: 80%;
     background-color: rgba(255, 255, 255, 0.63);
     border-radius: 5px;
-    display: grid;
+    display: none;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    margin: 0 auto 2% auto;
-    padding: 3% 0 3% 0;
+    margin: 2% auto 1% auto;
+    padding: 2% 0 1% 0;
     grid-row: 1;
+}
+.current_entry {
+    display: grid;
 }
 .entry__img {
     text-align: center;
@@ -303,6 +338,13 @@ section {
 .entry__description {
     grid-column: 2;
     grid-row: 1/2;
+    font-size: 130%;
+    padding-right: 4%;
+}
+.entry__description h3{
+    font-size: 150%;
+    text-align: center;
+    margin-bottom: 4%;
 }
 
 .entry__links{
@@ -311,7 +353,7 @@ section {
     text-align: center;
 }
 .entry__links ul{
-    font-size: 80%;
+    font-size: 110%;
     margin: 5% 0 0 5%;
 }
 .entry__links ul li {
@@ -320,87 +362,47 @@ section {
 }
 
 
-
+/*--------portfolio-nav------*/
 .portfolio__nav {
+    display: block;
     grid-row: 2;
+    position: relative;
     width: 80%;
-    margin: 5% auto; 
+    margin: 1% auto; 
     text-align: center;
 }
 .portfolio__nav_thumb{
-    width: 20%;
+    width: 17%;
     border-radius: 5px;
     margin-right: 8%;
+    cursor: pointer;
+    transition: border 0.2s;
 }
 .portfolio__nav_thumb:hover {
-    border: 5px solid blue;
+    border: 5px solid #b10235;
 }
-.portfolio__nav_selected{
-    border: 5px solid red;
-}
-/*
-.portfolio__entry {
-    flex: 0 1 30%;
-    margin-right: 5%;
+.portfolio__nav_selected,
+.portfolio__nav_selected.portfolio__nav_thumb:hover {
+    border: 5px solid white;
+    cursor: none;
 }
 
-.portfolio__thumb {
+/*------portfolio-github------*/
+.portfolio__more {
+    grid-row: 3;
+    margin: 0 auto;
 }
-
-.entry__img {
-    width: 100%;
-    border-radius: 5px;
-    box-shadow: 5px 10px rgba(0, 0, 0, 0.2); 
-}
-
-.entry__content,
-.entry__links {
-    display: none
-}
-
-.portfolio__entry h3 {
-    color: black;
-    text-align: center;
-    padding: 4% 0 6% 0;
-}
-
-.entry__content h3,
-.entry__links h3 {
-    font-size: 150%;
-}
-
-.entry__content{
-    font-size: 90%;
+.portfolio__more a {
     color: white;
-    background: rgba(255, 255, 255, 0.32);
-    flex: 1;
-    padding: 0 2%;
-}
-
-
-
-*/
-
-
-.link-btn {
-    color: white;
-    text-align: center;
     text-decoration: none;
-    border: none;
-    text-align:center;
-    float: right;
-    background-color: rgb(60, 60, 60);
-    padding: 5px 5px;
-    cursor: pointer;
-    transition: opacity 0.3s;
-    border-radius: 500px;
+    transition: color 0.2s, background 0.2s;
 }
-
-.link-btn:hover {
-    opacity: 0.7;
+.portfolio__more a:hover {
+    color: #b10235;
+    padding: 2%;
+    border-radius: 5px;
+    background-color: white;
 }
-
-
 
 /*-----------------------------------------*/
 /*---------------ABOUT-SECTION-------------*/
@@ -430,7 +432,7 @@ section {
     flex: 0 1 50%;
     font-size: 110%;
     margin: 0 2% 0 1%;
-    padding-right:10px;
+    padding-right:3%;
     border-right:4px solid black;
     border-radius:3px;
 }

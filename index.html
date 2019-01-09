@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">  
         <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/jqcloud.min.css">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
         <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
         <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,300i,400,900" rel="stylesheet">
@@ -36,11 +37,11 @@
                     <div id="js--home-nav">
                          <nav>
                              <ul class="main-nav hidden-nav js--main-nav">
-                                 <li><a class="js--scroll-to-portfolio current-page-nav">Portfolio</a></li>
+                                 <li><a class="js--scroll-to-portfolio">Portfolio</a></li>
                                  <li><div class="main-nav--divider">&#124;</div></li>
-                                 <li><a class="js--scroll-to-about current-page-nav">Bio</a></li>
+                                 <li><a class="js--scroll-to-about">Bio</a></li>
                                  <li><div class="main-nav--divider">&#124;</div></li>
-                                 <li><a class="contact current-page-nav">Contact</a></li>
+                                 <li><a class="contact">Contact</a></li>
                              </ul>
                              <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
                         </nav>
@@ -50,43 +51,96 @@
                 <div class="js--circle" id="circle-text">
                     &bull;&bull;UNDER-CONSTRUCTION&bull;&bull;UNDER-CONSTRUCTION&bull;&bull;UNDER-CONSTRUCTION
                     <!--&bull;&bull;HTML&bull;&bull;CSS&bull;&bull;JAVASCRIPT&bull;&bull;JAVA&bull;&bull;PYTHON&bull;&bull;WORDPRESS&bull;&bull;SQL-->
-                </div>
-                
+                </div>    
             </figure>
         </section>
-        
-        <!--<section class="page clearfix" id="portfolio-section">
+        <section class="page clearfix" id="portfolio-section">
             <h1 class="js--page-header">Portfolio</h1>
             <div class="portfolio js--portfolio">
-                    <div class="portfolio__entry"> 
+                    <div class="portfolio__entry js--entry" id='entry_1'> 
                         <div class="entry__img">
-                            <img src="resources/css/img/Test_IMG.PNG">
+                            <img src="resources/css/img/PortfolioSite.png">
                         </div>
                         <div class="entry__description">
-                            <h3>Example</h3>
+                            <h3>Developer Portfolio</h3>
                             <p>
                             <b>Description:</b> 
                                 <br>
-                                Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content Some Content.
+                                This web design acts as a developer portfolio and information page. A responsive and mobile-friendly design, this is the site you are currently viewing!
                             </p>
-                            <br><br>
+                            <br>
                             <p>
                                 <b>Keywords:</b> 
                                 <br>
-                                #HTML #CSS #JavaScript #Python #Flask #WebDesign
+                                #HTML #CSS #JavaScript #JQuery #WebDesign
                             </p>
                         </div>
                         <div class="entry__links">
                             <ul>
-                                <li><a href="#"><button class="link-btn"><i class="ion-social-github"></i> Git Repo</button></a></li>
-                                <li><a href="#"><button class="link-btn">&nbsp;&nbsp;&nbsp;<i class="ion-earth"></i>&nbsp;&nbsp;Live&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a></li>
+                                <li><a href="https://github.com/Camm66/Portfolio-Site"><button class="link-btn"><i class="ion-social-github"></i> Git Repo</button></a></li>
+                                <li><a href="#"><button class="link-btn disabled-btn">&nbsp;&nbsp;&nbsp;<i class="ion-earth"></i>&nbsp;&nbsp;Live&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                <div class="portfolio__entry current_entry js--entry" id='entry_2'> 
+                        <div class="entry__img">
+                            <img src="resources/css/img/CatalogApp.png">
+                        </div>
+                        <div class="entry__description">
+                            <h3>Item Catalog CRUD App</h3>
+                            <p>
+                            <b>Description:</b> 
+                                <br>
+                                This application provides a database of items within a variety of categories, and is supported by a user registration and authentication system. Authenticated users have the ability to post, edit and delete their own items.
+                            </p>
+                            <br>
+                            <p>
+                                <b>Keywords:</b> 
+                                <br>
+                                #HTML #CSS #JavaScript #Python #Flask #CRUD #Oauth
+                            </p>
+                        </div>
+                        <div class="entry__links">
+                            <ul>
+                                <li><a href="https://github.com/Camm66/Item-Catalog-Web-App"><button class="link-btn"><i class="ion-social-github"></i> Git Repo</button></a></li>
+                                <li><a href="#"><button class="link-btn disabled-btn">&nbsp;&nbsp;&nbsp;<i class="ion-earth"></i>&nbsp;&nbsp;Live&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                <div class="portfolio__entry js--entry" id='entry_3'> 
+                        <div class="entry__img">
+                            <img src="resources/css/img/TranslatorApp.PNG">
+                        </div>
+                        <div class="entry__description">
+                            <h3>Translation Reading App</h3>
+                            <p>
+                            <b>Description:</b> 
+                                <br>
+                                This Angular-based application allows users to search for wikipedia articles and translate individual words or sections in the user-specified language.
+                            </p>
+                            <br>
+                            <p>
+                                <b>Keywords:</b> 
+                                <br>
+                                #Angular #Firebase #GoogleTranslateAPI #GoogleAnalytics #HTML #CSS #JavaScript 
+                            </p>
+                        </div>
+                        <div class="entry__links">
+                            <ul>
+                                <li><a href="https://github.com/Camm66/Translator-App"><button class="link-btn"><i class="ion-social-github"></i> Git Repo</button></a></li>
+                                <li><a href="#"><button class="link-btn disabled-btn">&nbsp;&nbsp;&nbsp;<i class="ion-earth"></i>&nbsp;&nbsp;Live&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a></li>
                             </ul>
                         </div>
                     </div>
                 <div class="portfolio__nav">
-                        <img src="resources/css/img/Test_IMG.PNG" class="portfolio__nav_thumb">
-                        <img src="resources/css/img/Test_IMG.PNG" class="portfolio__nav_thumb">
-                        <img src="resources/css/img/Test_IMG.PNG" class="portfolio__nav_thumb">
+                    <img src="resources/css/img/PortfolioSite.png" class="portfolio__nav_thumb" id="p__nav_1" onclick="setEntry('#p__nav_1', '#entry_1')">
+                    <img src="resources/css/img/CatalogApp.png" class="portfolio__nav_thumb portfolio__nav_selected" id="p__nav_2" onclick="setEntry('#p__nav_2', '#entry_2')">
+                    <img src="resources/css/img/TranslatorApp.PNG" class="portfolio__nav_thumb" id="p__nav_3"  onclick="setEntry('#p__nav_3', '#entry_3')">
+                </div>
+                <div class="portfolio__more">
+                    <a href="https://github.com/Camm66">
+                        View more on <u>Github.com</u>...
+                    </a>
                 </div>
             </div>
         </section>
@@ -94,17 +148,17 @@
             <h1 class="js--page-header"></h1>
             <div class="profile">
                 <div class="profile__img">
-                    <img src="resources/css/img/blank-user.png">
+                    <img src="resources/css/img/user.PNG">
                     <div class="profile__links"><a href="#" class="resume-btn">Resume</a></div>
                 </div>
-                    <div class="profile__bio"><h1>About Cam</h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae sapien sem. Suspendisse nec orci hendrerit, lobortis arcu et, viverra libero. Maecenas et tempor turpis, et ornare enim. Nam vitae interdum mauris. Mauris nisl neque, porttitor sit amet consectetur sit amet, feugiat sit amet urna. Ut vel nisi ac mi sodales suscipit. Vestibulum rhoncus pellentesque ipsum a consectetur. 
+                <div class="profile__bio"><h1>About Cam</h1>Greetings,<br> My name is Cameron Morales and I am a <i>Fullstack Web Developer</i> residing in Chicago, IL. I'm also a Graduate Student at Depaul University, where I am completing my M.S. degree in Computer Science. Feel free to <a href="#">contact</a> me regarding work, collaboration, or just to chat all things tech!
                     <br>
                     <br>
-                    Donec sit amet facilisis lectus. Ut auctor placerat est vel elementum. Aliquam varius condimentum lacus vel malesuada. Sed ac faucibus ante. Maecenas scelerisque lorem sed vestibulum tempus. Suspendisse pulvinar odio in mauris consequat bibendum.
+                        When I'm not honing my skills as a developer, I enjoy using my computers to write and record experimental electronic music. Check out my sounds on <a href="">soundcloud.com</a>.
                 </div>
                 <div class="profile__skills">
                     <div id="tags" class="vertical-center">
-                        <a href="#" rel="6">Python</a>
+                        <!--<a href="#" rel="6">Python</a>
                         <a href="#" rel="7">HTML</a>
                         <a href="#" rel="7">JavaScript</a>
                         <a href="#" rel="6">Angular</a>
@@ -114,19 +168,19 @@
                         <a href="#" rel="6">Eclipse</a>
                         <a href="#" rel="8">Java</a>
                         <a href="#" rel="5">C</a>
-                        <a href="#" rel="6">NoSQL</a>
+                        <a href="#" rel="6">NoSQL</a>-->
                     </div>
                 </div>
             </div>
             <div id="social-bottom"></div>
-        </section>-->
+        </section>
 <!--        <section class="page contact-section" id="contact-section">
         </section>-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
         <script src="vendors/js/jquery.waypoints.min.js"></script>
         <script src='vendors/js/jquery.lettering.js'></script>
-        <script src="vendors/js/jquery.tagcloud.js"></script>
+        <script src="vendors/js/jqcloud.min.js"></script>
         <script src="vendors/js/circletype.min.js"></script>
         <script src="resources/js/animations.js"></script>
         <script src="resources/js/font-drawing.js"></script>

@@ -6,14 +6,23 @@
 
 /* Small tablet to big tablet: from 768px to 1023px */
 @media only screen and (max-width: 1023px){
-    
+    .portfolio__nav { margin: 3% auto 2% auto; }
+    .portfolio__nav_thumb { width: 25%;}
 }
 
 /* Small phones small tablets: from 481px to 767px */
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 787px){
+    .portfolio__nav { margin: 5% auto 2% auto; }
+    .portfolio__nav_thumb { width: 24%;}
 }
 
 /* Screen limit for mobile nav and JS animations */
+@media only screen and (max-width: 620px)
+ {
+}
+
+
+/* Small phones: from 0 to 480px */
 @media only screen and (max-width: 620px)
  {
      #logo { display: none; }
@@ -37,12 +46,7 @@
          font-size: 100%;
          margin: 5%;
      }
-}
-
-
-/* Small phones: from 0 to 480px */
-@media only screen and (max-width: 620px)
- {
+     
      .home-content { 
          position: relative; 
          top: 35%;
@@ -102,6 +106,33 @@
         padding-top: 0;
      }
      
+     /*------Portfolio-Mobile------*/
+     #portfolio-section {
+         overflow-y: auto;
+     }
+     .portfolio {
+         display:table;
+     }
+     .portfolio__entry {
+         display: block;
+         margin-bottom: 7%;
+     }
+     .entry__description{
+         padding: 0 3%;
+     }
+     .entry__description h3{
+        font-size: 140%;
+     }
+     .entry__links ul li{
+        margin-bottom: 3%;
+     }
+     .portfolio__nav {
+         display: none;
+     }
+     .portfolio__more {
+         font-size: 120%;
+         text-align: center;
+     }
      
      /*---------About-Mobile--------*/
      .profile {

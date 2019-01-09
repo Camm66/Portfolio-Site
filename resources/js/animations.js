@@ -36,13 +36,19 @@ $(document).ready(function() {
     });
     
     $('.js--page-header').waypoint(function(direction) {
-        $('.js--page-header').addClass('animated fadeIn');
+        $('.js--page-header').addClass('animated fadeInDown');
     }, {
         offset: '95%'
     });
     
     $('.js--portfolio').waypoint(function(direction) {
-        $('.js--portfolio').addClass('animated fadeIn');
+        $('.js--portfolio').addClass('animated fadeInUp');
+    }, {
+        offset: '95%'
+    });
+    
+    $('.js--entry').waypoint(function(direction) {
+        $('.js--entry').addClass('animated fadeInLeft');
     }, {
         offset: '95%'
     });
