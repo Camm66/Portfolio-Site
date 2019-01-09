@@ -16,6 +16,12 @@
 /*-------------------Cross current section in the nav-----------------------*/
         $('.home-content').waypoint(function(direction){
             $(".js--scroll-to-portfolio").removeClass("current-page-nav");
+            if(direction =="down"){
+                $('.main-nav').addClass('hidden-nav');
+            }
+            else {
+                $('.main-nav').removeClass('hidden-nav');
+            }
        });
      
        $('#portfolio-section').waypoint(function(direction){
@@ -37,14 +43,11 @@
      
 /*----------------------Scroll to selected section---------------------------*/
     $('.js--scroll-to-portfolio').click(function(){
-        $('html, body').animate({scrollTop: $('#portfolio-section').offset().top}, 1000);
-        toggle();
-        
+        $('html, body').animate({scrollTop: $('#portfolio-section').offset().top}, 1000); 
     });
     
     $('.js--scroll-to-about').click(function(){
         $('html, body').animate({scrollTop: $('#about-section').offset().top}, 1000);
-        toggle();
     });
      
 /*-------------------------------Mobile navigation----------------------------*/
@@ -53,17 +56,17 @@
     });
      
      function toggle(){
-        var nav = $('nav');
+        var nav = $('.main-nav');
         var icon = $('.mobile-nav-icon i');
-         
-         if(icon.hasClass('ion-navicon-round')){
-            icon.addClass('ion-close-round');
+        if(icon.hasClass('ion-navicon-round')){
             icon.removeClass('ion-navicon-round');
-            $('.main-nav').removeClass('hidden-nav');
-        }else {
+            icon.addClass('ion-close-round');
+            nav.removeClass('hidden-nav');
+        }else 
+        {
             icon.addClass('ion-navicon-round');
             icon.removeClass('ion-close-round');
-            $('.main-nav').addClass('hidden-nav');
+            nav.addClass('hidden-nav');
         }
      }
 
@@ -83,7 +86,7 @@
      const circleType = new CircleType(document.getElementById('circle-text'));
      
 /*----------------------------Tag Cloud---------------------------------*/   
-     var words = [
+/*     var words = [
         {text: "Python", weight: 13},
         {text: "Java", weight: 10.5},
         {text: "HTML", weight: 9.4},
@@ -97,17 +100,17 @@
         {text: "C", weight: 5}];
 
         $('#tags').jQCloud(words);
-     
+*/     
 });
 
 /*---------------------------Portfolio-Slideshow------------------------------*/
 function setEntry(n, m) {
-                $(".portfolio__nav_thumb").each(function() {
-                    $(this).removeClass("portfolio__nav_selected");
-                });
-                $(n).addClass("portfolio__nav_selected");
-                $(".portfolio__entry").each(function() {
-                    $(this).removeClass("current_entry");
-                });
-                $(m).addClass("current_entry");
-            }
+    $(".portfolio__nav_thumb").each(function() {         
+        $(this).removeClass("portfolio__nav_selected");
+    });
+    $(n).addClass("portfolio__nav_selected");
+    $(".portfolio__entry").each(function() {
+        $(this).removeClass("current_entry");
+    });
+    $(m).addClass("current_entry");
+}
