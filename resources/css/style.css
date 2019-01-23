@@ -164,6 +164,7 @@ section {
     color:#3c3c3c;
 }
 
+
 /*--StickyNav--*/
 .sticky {
     position: fixed;
@@ -207,6 +208,24 @@ section {
     color: #3c3c3c;
 }
 
+.contact {cursor:default;}
+
+.contact .tooltip{
+    visibility: hidden;
+    font-size: 60%;
+    width: 60%;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+
+.contact:hover .tooltip {
+  visibility: visible;
+}
 
 
 /*------Rotating-Text------*/
