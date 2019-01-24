@@ -496,6 +496,7 @@ section {
 /*--------------CONTACT-SECTION------------*/
 /*-----------------------------------------*/
 #contact-section {
+    display: none;
     background-color: #2f2f2f;
 }
 
@@ -507,4 +508,16 @@ section {
     color:white;
     padding:10px;
     animation-delay: .5s;
+}
+
+.contact-container {
+    
+}
+
+.contact-info {
+    
+}
+
+.contact-form{
+    
 }
