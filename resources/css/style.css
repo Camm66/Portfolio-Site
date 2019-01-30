@@ -59,7 +59,7 @@ section {
 .page {
     height: 100vh;
     width: 100vw;
-    max-width: 1300px;
+    max-width: 1600px;
     margin:0 auto; 
 }
 
@@ -307,6 +307,7 @@ section {
 
 #portfolio-section {
     background-color: #2f2f2f;
+    position: relative;
     overflow: hidden;
 }
 
@@ -387,11 +388,11 @@ section {
     grid-row: 2;
     position: relative;
     width: 80%;
-    margin: 1% auto; 
+    margin: 3% auto; 
     text-align: center;
 }
 .portfolio__nav_thumb{
-    width: 17%;
+    width: 20%;
     border-radius: 5px;
     margin-right: 8%;
     cursor: pointer;
@@ -408,7 +409,6 @@ section {
 
 /*------portfolio-github------*/
 .portfolio__more {
-    grid-row: 3;
     margin: 0 auto;
 }
 .portfolio__more a {
@@ -430,7 +430,7 @@ section {
 .profile {
     width: 90%;
     display: flex;
-    margin: 0 auto;
+    margin: 5% auto;
     padding-top: 5%
 }
 
@@ -481,9 +481,9 @@ h1 span {
 }
 
 #social-bottom {
-    position: relative;
+    position: fixed;
     font-size: 70%;
-    top: 15%;
+    bottom: 0;
 }
 
 /*-----tag-cloud-----*/
@@ -508,8 +508,6 @@ h1 span {
 }
 
 .contact-section {
-    height:80%;
-    width:80%;
     margin: 0 auto;
     overflow:hidden;
     color:white;

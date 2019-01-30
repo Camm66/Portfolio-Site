@@ -6,6 +6,7 @@
 
 /* Small tablet to big tablet: from 768px to 1023px */
 @media only screen and (max-width: 1023px){
+    .portfolio__entry { margin-top: 10%}
     .portfolio__nav { margin: 3% auto 2% auto; }
     .portfolio__nav_thumb { width: 25%;}
 }
@@ -194,4 +195,7 @@
     #portfolio-section h1{
         font-size: 40px;
     }
+    
+    #social-bottom { 
+    display: none}
 }
