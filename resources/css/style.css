@@ -503,7 +503,7 @@ h1 span {
 /*--------------CONTACT-SECTION------------*/
 /*-----------------------------------------*/
 #contact-section {
-    display: block;
+    display: none;
     background-color: #2f2f2f;
     font-size: 200%;
 }
