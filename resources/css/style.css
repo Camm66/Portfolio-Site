@@ -114,7 +114,7 @@ section {
     bottom: 95%;
     left: 85%;
     animation-delay: 1s;
-    display: none;
+    display: block;
 }
 
 .home-content {
