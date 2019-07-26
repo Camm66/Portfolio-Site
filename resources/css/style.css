@@ -33,6 +33,16 @@ html{
     visibility: hidden;
 }
 
+#wrapper {
+    height: 100%;
+    width: 100%;
+    transition: background-color 0.7s;
+}
+
+.mainColor { background-color: linear-gradient(to bottom right,#fff, #bfbfbf); }
+
+.portfolioColor { background-color: #2f2f2f; }
+
 
 /*-----------------------------------------*/
 /*---------REUSABLE-COMPONENTS-------------*/
@@ -98,14 +108,11 @@ section {
     opacity: 0.7;
 }
 
-.disabled-btn { cursor: none; }
+.disabled-btn { pointer-events: none;}
 
 /*-----------------------------------------*/
 /*--------------HEADER-SECTION-------------*/
 /*-----------------------------------------*/
-
-#home-section { background: linear-gradient(to bottom right,#fff, #bfbfbf); }
-
 
 #logo {
     position: absolute;
@@ -177,9 +184,9 @@ section {
 .sticky {
     position: fixed;
     top: 0;
-    right: 0%;
-    width: 35%;
-    background-color: rgba(255, 255, 255, 0.93);
+    right: 0;
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.63);
     border-radius: 0 0 0 3px;
     box-shadow: 0 1px 1px #4a4a4a;
     z-index: 9999;
@@ -190,7 +197,7 @@ section {
     float: left;
 }
 .sticky .main-nav li a{
-    font-size: 150%;
+    font-size: 120%;
 }
 
 .sticky .main-nav--divider{
@@ -314,7 +321,6 @@ section {
 /*-----------------------------------------*/
 
 #portfolio-section {
-    background-color: #2f2f2f;
     position: relative;
     overflow: hidden;
 }

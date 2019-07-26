@@ -49,7 +49,20 @@
     $('.js--scroll-to-about').click(function(){
         $('html, body').animate({scrollTop: $('#about-section').offset().top}, 1000);
     });
-     
+/*-----------------------Background Color Transitions--------------------------*/
+$(window).scroll(function() {
+    if ($(this).scrollTop() <= 450) {
+        $("#wrapper").addClass("mainColor")
+        .removeClass('portfolioColor');
+    } else if ($(this).scrollTop() <= 1000) {
+        $("#wrapper").addClass("portfolioColor")
+        .removeClass('mainColor');
+    } else {
+        $("#wrapper").addClass("mainColor")
+        .removeClass('portfolioColor');
+    }
+  });
+
 /*-------------------------------Mobile navigation----------------------------*/
     $('.js--nav-icon').click(function(){
         toggle();
