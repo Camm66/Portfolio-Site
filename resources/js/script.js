@@ -1,5 +1,5 @@
  $(document).ready(function(){
-     
+    $(window).scrollTop(0);
 /*-----------------Use waypoint to implement sticky nav---------------------*/
     $('#portfolio-section').waypoint(function(direction){
         if(direction == "down"){
