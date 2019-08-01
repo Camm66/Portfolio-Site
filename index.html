@@ -14,7 +14,7 @@
         <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,300i,400,900" rel="stylesheet">
         <title>Cameron Morales</title>
     </head>
-    <body id="wrapper"> 
+    <body> 
         <header>
             <div id="js--sticky-nav">
             </div>
@@ -27,19 +27,19 @@
                  <ul class="social-links js--social">
                         <li><a href="https://github.com/camm66"><i class="ion-social-github github-icon"></i></a></li>
                         <li><a href="https://www.linkedin.com/in/cameron-morales/"><i class="ion-social-linkedin linkedin-icon"></i></a></li>
-                        <li><a href="https://soundcloud.com/cameronamorales"><i class="ion-android-cloud-circle soundcloud-icon"></i></a></li>
+                        <li><a href="https://soundcloud.com/cameronamorales" class="disabled-btn"><i class="ion-android-cloud-circle soundcloud-icon"></i></a></li>
                     </ul>
             </div>
             <figure class="home-content">
                 <div class="home__info">
                     <h1 class="name js--name">Cameron Morales</h1>
-                    <p class="titles js--titles">Developer, Designer, Composer</p>
+                    <p class="titles js--titles">Software Developer</p>
                     <div id="js--home-nav">
                          <nav>
                              <ul class="main-nav js--main-nav">
-                                 <li><a class="js--scroll-to-portfolio">Portfolio</a></li>
+                                 <li><a class="js--scroll-to-portfolio disabled-btn">Portfolio</a></li>
                                  <li><div class="main-nav--divider">&#124;</div></li>
-                                 <li><a class="js--scroll-to-about">Bio</a></li>
+                                 <li><a class="js--scroll-to-about disabled-btn">Bio</a></li>
                                  <li><div class="main-nav--divider">&#124;</div></li>
                                  <li><a class="disabled-btn">Contact</a></li>
                              </ul>
@@ -54,7 +54,7 @@
                 </div>    
             </figure>
         </section>
-        <section class="page clearfix" id="portfolio-section">
+        <section class="page clearfix" id="portfolio-section" style="display:none;">
             <h1 class="js--page-header section-header">Portfolio</h1>
             <div class="portfolio js--portfolio">
                     <div class="portfolio__entry js--entry" id='entry_1'> 
@@ -144,7 +144,7 @@
                 </div>
             </div>
         </section>
-        <section class="page about-section" id="about-section">
+        <section class="page about-section" id="about-section" style="display:none;">
             <h1 class="js--page-header"></h1>
             <div class="profile">
                 <div class="profile__img">
@@ -195,6 +195,7 @@
             </div>
         </section>
         </div>
+    </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
         <script src="vendors/js/jquery.waypoints.min.js"></script>
@@ -202,7 +203,7 @@
         <script src="vendors/js/jqcloud.min.js"></script>
         <script src="vendors/js/circletype.min.js"></script>
         <script src="resources/js/animations.js"></script>
-        <script src="resources/js/font-drawing.js"></script>
+        <!-- <script src="resources/js/font-drawing.js"></script> -->
         <script src="resources/js/script.js"></script>
     </body>
 </html>

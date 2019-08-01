@@ -1,45 +1,45 @@
  $(document).ready(function(){
     $(window).scrollTop(0);
 /*-----------------Use waypoint to implement sticky nav---------------------*/
-    $('#portfolio-section').waypoint(function(direction){
-        if(direction == "down"){
-            $('nav').addClass("sticky");
-            $("nav").appendTo("#js--sticky-nav");
-           }
-        else {
-            $('nav').removeClass("sticky");
-            $("nav").appendTo("#js--home-nav");
-        }
-    }, {
-        offset: '60px;'
-    });
+    // $('#portfolio-section').waypoint(function(direction){
+    //     if(direction == "down"){
+    //         $('nav').addClass("sticky");
+    //         $("nav").appendTo("#js--sticky-nav");
+    //        }
+    //     else {
+    //         $('nav').removeClass("sticky");
+    //         $("nav").appendTo("#js--home-nav");
+    //     }
+    // }, {
+    //     offset: '60px;'
+    // });
 /*-------------------Cross current section in the nav-----------------------*/
-        $('.home-content').waypoint(function(direction){
-            $(".js--scroll-to-portfolio").removeClass("current-page-nav");
-            if(direction =="down"){
-                $('.main-nav').addClass('hidden-nav');
-            }
-            else {
-                $('.main-nav').removeClass('hidden-nav');
-            }
-       });
+    //     $('.home-content').waypoint(function(direction){
+    //         $(".js--scroll-to-portfolio").removeClass("current-page-nav");
+    //         if(direction =="down"){
+    //             $('.main-nav').addClass('hidden-nav');
+    //         }
+    //         else {
+    //             $('.main-nav').removeClass('hidden-nav');
+    //         }
+    //    });
      
-       $('#portfolio-section').waypoint(function(direction){
-           if(direction =="down"){
-               $(".js--scroll-to-portfolio").addClass("current-page-nav");
-           }
-       });
+    //    $('#portfolio-section').waypoint(function(direction){
+    //        if(direction =="down"){
+    //            $(".js--scroll-to-portfolio").addClass("current-page-nav");
+    //        }
+    //    });
      
-        $('#about-section').waypoint(function(direction){
-           if(direction =="down"){
-               $(".js--scroll-to-about").addClass("current-page-nav");
-                $(".js--scroll-to-portfolio").removeClass("current-page-nav");
-           }
-           else {
-               $(".js--scroll-to-portfolio").addClass("current-page-nav");
-               $(".js--scroll-to-about").removeClass("current-page-nav");
-           }
-       });
+    //     $('#about-section').waypoint(function(direction){
+    //        if(direction =="down"){
+    //            $(".js--scroll-to-about").addClass("current-page-nav");
+    //             $(".js--scroll-to-portfolio").removeClass("current-page-nav");
+    //        }
+    //        else {
+    //            $(".js--scroll-to-portfolio").addClass("current-page-nav");
+    //            $(".js--scroll-to-about").removeClass("current-page-nav");
+    //        }
+    //    });
      
 /*----------------------Scroll to selected section---------------------------*/
     $('.js--scroll-to-portfolio').click(function(){
@@ -84,16 +84,16 @@ $(window).scroll(function() {
      }
 
 /*-----------------Move Social icons to the About Me section------------------*/
-    $('#about-section').waypoint(function(direction){
-           if(direction =="down"){
-               $(".social-links").appendTo("#social-bottom");
-           }
-           else {
-               $(".social-links").appendTo("#social-top");
-           }
-       }, {
-        offset: "50%"
-    });  
+    // $('#about-section').waypoint(function(direction){
+    //        if(direction =="down"){
+    //            $(".social-links").appendTo("#social-bottom");
+    //        }
+    //        else {
+    //            $(".social-links").appendTo("#social-top");
+    //        }
+    //    }, {
+    //     offset: "50%"
+    // });  
      
 /*----------------------Circle text animation---------------------------*/
      const circleType = new CircleType(document.getElementById('circle-text'));

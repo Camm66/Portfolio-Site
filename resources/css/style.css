@@ -5,6 +5,13 @@ red - #b10235
 
 */
 
+
+/*-----------Temp-Construction-Styles----------*/
+
+#wrapper{
+    display: none;
+}
+
 /*-----------------------------------------*/
 /*-----------BASIC-PAGE-SETUP--------------*/
 /*-----------------------------------------*/
@@ -149,7 +156,7 @@ section {
 .titles { 
     font-weight: 300;
     font-style: italic;
-    margin-left: 10%;
+    margin-left: 20%;
     animation-delay: 0.5s;
 }
 
