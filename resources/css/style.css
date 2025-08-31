@@ -256,17 +256,7 @@ section {
 
 
 /*------Rotating-Text------*/
-#circle-text {
-    font-size: 20px;
-    color: #b10235;
-    position: absolute;
-    animation: animate 20s infinite linear;
-    animation-delay: 1s;
-    transform-origin: 50% 50%;
-    pointer-events: none;
-    will-change: transform;
-    z-index: 0;
-}
+#circle-text { display: none; }
 
 @keyframes animate
 {
