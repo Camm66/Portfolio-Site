@@ -92,9 +92,16 @@ export default function Home() {
       <p className="text-green-300 text-lg sm:text-xl text-center max-w-md mb-3">
         Something great is coming. Even Kermit is excited.
       </p>
-      <p className="text-green-600 text-sm text-center italic">
+      <p className="text-green-600 text-sm text-center italic mb-8">
         &ldquo;It&apos;s not easy being green... but it&apos;s worth it.&rdquo;
       </p>
+
+      <a
+        href="/resume"
+        className="mt-2 px-6 py-3 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-full transition-colors duration-200 text-sm tracking-wide"
+      >
+        View Resume →
+      </a>
     </main>
   );
 }
