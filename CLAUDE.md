@@ -17,6 +17,7 @@ To ship a change:
 1. Make edits in `app/` (or config files)
 2. Verify locally: `npm run lint && npm run build`
 3. Commit and push to `master`
+4. Check the deploy: `gh run watch` (or the Actions tab). Live at https://www.cameronmorales.com once green.
 
 ## Rules
 
