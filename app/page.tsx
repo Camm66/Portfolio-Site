@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-green-950 via-green-900 to-emerald-950 flex flex-col items-center justify-center text-white px-4 py-12">
+    <main className="min-h-screen bg-linear-to-b from-green-950 via-green-900 to-emerald-950 flex flex-col items-center justify-center text-white px-4 py-12">
 
       {/* Kermit SVG */}
       <div className="mb-8 drop-shadow-2xl">
@@ -79,12 +79,12 @@ export default function Home() {
       </div>
 
       {/* Badge */}
-      <div className="bg-green-800 bg-opacity-60 border border-green-500 rounded-full px-4 py-1 text-green-300 text-sm font-medium mb-6 tracking-widest uppercase">
+      <div className="bg-green-800/60 border border-green-500 rounded-full px-4 py-1 text-green-300 text-sm font-medium mb-6 tracking-widest uppercase">
         🚧 Under Construction
       </div>
 
       {/* Headline */}
-      <h1 className="text-5xl sm:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-400 mb-4 text-center leading-tight">
+      <h1 className="text-5xl sm:text-7xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-green-300 to-emerald-400 mb-4 text-center leading-tight">
         Cameron Morales
       </h1>
 

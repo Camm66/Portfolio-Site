@@ -5,7 +5,8 @@ Next.js (App Router) static-export portfolio, deployed to GitHub Pages at https:
 ## Stack
 
 - Next.js 16 with `output: "export"` (static export to `out/`), React 19
-- Tailwind CSS 3, TypeScript
+- Tailwind CSS 4 (CSS-first: config lives in `app/globals.css`, there is no
+  `tailwind.config.ts`), TypeScript 6, ESLint 10
 - Pages live in `app/` (`app/page.tsx` is the homepage, `app/resume/page.tsx` is /resume)
 
 ## Deploy pipeline
