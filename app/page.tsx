@@ -1,13 +1,8 @@
+import Blackjack from "./components/Blackjack";
+
 const contact = [
   { label: "cam.morales93@gmail.com", href: "mailto:cam.morales93@gmail.com" },
   { label: "github.com/camm66", href: "https://github.com/camm66" },
-];
-
-const focus = [
-  { key: "Interface", value: "React · Next.js · TypeScript" },
-  { key: "Services", value: "Python · GraphQL · REST" },
-  { key: "Infrastructure", value: "Docker · Kubernetes · Helm · Jenkins" },
-  { key: "Data & Caching", value: "Redis — clustered and in-memory" },
 ];
 
 export default function Home() {
@@ -37,40 +32,6 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Signal */}
-      <div className="mt-[3.4rem] mb-6 flex items-center gap-4">
-        <h2 className="font-data m-0 whitespace-nowrap text-[0.73rem] font-medium uppercase tracking-[0.3em] text-brass">
-          Signal
-        </h2>
-        <span className="h-px flex-1 bg-edge" />
-      </div>
-
-      <p className="m-0 max-w-3xl text-[clamp(1rem,2.2vw,1.14rem)] text-[#d8d3c8]">
-        Six years building and instrumenting web systems end to end — from React and
-        Next.js surfaces down through Redis caching layers, Kubernetes deployments, and
-        the CI/CD pipelines that carry them. I tend to own the parts nobody wants to own,
-        then make them measurably faster.
-      </p>
-
-      {/* Focus */}
-      <div className="mt-[3.4rem] mb-6 flex items-center gap-4">
-        <h2 className="font-data m-0 whitespace-nowrap text-[0.73rem] font-medium uppercase tracking-[0.3em] text-brass">
-          Focus
-        </h2>
-        <span className="h-px flex-1 bg-edge" />
-      </div>
-
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] gap-px border border-edge bg-edge">
-        {focus.map((f) => (
-          <div key={f.key} className="bg-panel px-5 py-4">
-            <h3 className="font-data m-0 mb-2 text-[0.63rem] font-medium uppercase tracking-[0.2em] text-brass">
-              {f.key}
-            </h3>
-            <p className="m-0 text-[0.92rem] text-[#cfcabf]">{f.value}</p>
-          </div>
-        ))}
-      </div>
-
       {/* Status */}
       <div className="mt-[3.4rem] mb-6 flex items-center gap-4">
         <h2 className="font-data m-0 whitespace-nowrap text-[0.73rem] font-medium uppercase tracking-[0.3em] text-brass">
@@ -95,6 +56,16 @@ export default function Home() {
       >
         View Resume &rarr;
       </a>
+
+      {/* Table */}
+      <div className="mt-[3.4rem] mb-6 flex items-center gap-4">
+        <h2 className="font-data m-0 whitespace-nowrap text-[0.73rem] font-medium uppercase tracking-[0.3em] text-brass">
+          Table
+        </h2>
+        <span className="h-px flex-1 bg-edge" />
+      </div>
+
+      <Blackjack />
     </main>
   );
 }
