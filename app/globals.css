@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+/* Shared design language with /resume (public/resume/index.html).
+   Keep these values in sync with the :root block in that file. */
+@theme {
+  --color-ink: #121a2b;
+  --color-panel: #19233a;
+  --color-edge: #26314c;
+  --color-brass: #c9963f;
+  --color-champagne: #e8ce96;
+  --color-haze: #8a97ae;
+  --color-paper: #f2ede3;
+  --color-patina: #6fa8a0;
+
+  --font-display: "Bodoni Moda", Georgia, serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}

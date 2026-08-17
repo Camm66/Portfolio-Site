@@ -1,106 +1,99 @@
+const contact = [
+  { label: "cam.morales93@gmail.com", href: "mailto:cam.morales93@gmail.com" },
+  { label: "github.com/camm66", href: "https://github.com/camm66" },
+];
+
+const focus = [
+  { key: "Interface", value: "React · Next.js · TypeScript" },
+  { key: "Services", value: "Python · GraphQL · REST" },
+  { key: "Infrastructure", value: "Docker · Kubernetes · Helm · Jenkins" },
+  { key: "Data & Caching", value: "Redis — clustered and in-memory" },
+];
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-linear-to-b from-green-950 via-green-900 to-emerald-950 flex flex-col items-center justify-center text-white px-4 py-12">
+    <main className="mx-auto min-h-screen max-w-5xl px-[clamp(1.1rem,4vw,3rem)] pt-[clamp(1.5rem,5vw,4.5rem)] pb-20">
+      {/* Nameplate */}
+      <header className="relative border border-edge border-t-2 border-t-brass bg-linear-to-b from-[#1c2740] to-[#161f33] p-[clamp(1.6rem,4vw,2.8rem)]">
+        <p className="font-data mb-4 text-[0.72rem] uppercase tracking-[0.28em] text-brass">
+          Full-Stack &nbsp;/&nbsp; Infrastructure
+        </p>
 
-      {/* Kermit SVG */}
-      <div className="mb-8 drop-shadow-2xl">
-        <svg
-          width="200"
-          height="220"
-          viewBox="0 0 200 220"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          {/* Body */}
-          <ellipse cx="100" cy="180" rx="45" ry="35" fill="#3a7d44" />
+        <h1 className="font-display m-0 text-[clamp(2.3rem,7vw,4.4rem)] font-normal leading-[1.02] tracking-[0.02em] text-paper">
+          Cameron <em className="italic text-champagne">Morales</em>
+        </h1>
 
-          {/* Neck */}
-          <rect x="88" y="140" width="24" height="20" rx="6" fill="#4a9e58" />
+        <div className="font-data mt-7 flex flex-wrap gap-x-6 gap-y-2 border-t border-edge pt-[1.1rem] text-[0.79rem] text-haze">
+          <span>Chicago, IL</span>
+          {contact.map((c) => (
+            <a
+              key={c.href}
+              href={c.href}
+              className="border-b border-champagne/30 text-champagne no-underline transition-colors hover:border-champagne"
+            >
+              {c.label}
+            </a>
+          ))}
+        </div>
+      </header>
 
-          {/* Head */}
-          <ellipse cx="100" cy="115" rx="52" ry="45" fill="#4a9e58" />
-
-          {/* Eyes - outer white */}
-          <ellipse cx="78" cy="95" rx="18" ry="20" fill="white" />
-          <ellipse cx="122" cy="95" rx="18" ry="20" fill="white" />
-
-          {/* Eyes - iris */}
-          <ellipse cx="80" cy="96" rx="12" ry="13" fill="#8BC34A" />
-          <ellipse cx="120" cy="96" rx="12" ry="13" fill="#8BC34A" />
-
-          {/* Eyes - pupil */}
-          <ellipse cx="81" cy="97" rx="7" ry="8" fill="#1a1a1a" />
-          <ellipse cx="121" cy="97" rx="7" ry="8" fill="#1a1a1a" />
-
-          {/* Eyes - highlight */}
-          <ellipse cx="84" cy="93" rx="2.5" ry="2.5" fill="white" />
-          <ellipse cx="124" cy="93" rx="2.5" ry="2.5" fill="white" />
-
-          {/* Eyebrow ridges */}
-          <ellipse cx="78" cy="78" rx="20" ry="6" fill="#3a7d44" />
-          <ellipse cx="122" cy="78" rx="20" ry="6" fill="#3a7d44" />
-
-          {/* Mouth area - wide frog mouth */}
-          <ellipse cx="100" cy="138" rx="38" ry="12" fill="#2d6e38" />
-
-          {/* Mouth smile */}
-          <path
-            d="M 65 135 Q 100 155 135 135"
-            stroke="#1a4a22"
-            strokeWidth="3"
-            fill="none"
-            strokeLinecap="round"
-          />
-
-          {/* Nostrils */}
-          <ellipse cx="93" cy="125" rx="4" ry="3" fill="#3a7d44" />
-          <ellipse cx="107" cy="125" rx="4" ry="3" fill="#3a7d44" />
-
-          {/* Arms */}
-          <path d="M 58 170 Q 30 160 20 175" stroke="#3a7d44" strokeWidth="14" fill="none" strokeLinecap="round" />
-          <path d="M 142 170 Q 170 160 180 175" stroke="#3a7d44" strokeWidth="14" fill="none" strokeLinecap="round" />
-
-          {/* Hands */}
-          <circle cx="18" cy="178" r="9" fill="#4a9e58" />
-          <circle cx="182" cy="178" r="9" fill="#4a9e58" />
-
-          {/* Legs */}
-          <path d="M 80 210 Q 70 220 55 215" stroke="#3a7d44" strokeWidth="12" fill="none" strokeLinecap="round" />
-          <path d="M 120 210 Q 130 220 145 215" stroke="#3a7d44" strokeWidth="12" fill="none" strokeLinecap="round" />
-
-          {/* Collar/neck frill */}
-          <path
-            d="M 75 148 Q 100 158 125 148"
-            stroke="#2d6e38"
-            strokeWidth="4"
-            fill="none"
-            strokeLinecap="round"
-          />
-        </svg>
+      {/* Signal */}
+      <div className="mt-[3.4rem] mb-6 flex items-center gap-4">
+        <h2 className="font-data m-0 whitespace-nowrap text-[0.73rem] font-medium uppercase tracking-[0.3em] text-brass">
+          Signal
+        </h2>
+        <span className="h-px flex-1 bg-edge" />
       </div>
 
-      {/* Badge */}
-      <div className="bg-green-800/60 border border-green-500 rounded-full px-4 py-1 text-green-300 text-sm font-medium mb-6 tracking-widest uppercase">
-        🚧 Under Construction
+      <p className="m-0 max-w-3xl text-[clamp(1rem,2.2vw,1.14rem)] text-[#d8d3c8]">
+        Six years building and instrumenting web systems end to end — from React and
+        Next.js surfaces down through Redis caching layers, Kubernetes deployments, and
+        the CI/CD pipelines that carry them. I tend to own the parts nobody wants to own,
+        then make them measurably faster.
+      </p>
+
+      {/* Focus */}
+      <div className="mt-[3.4rem] mb-6 flex items-center gap-4">
+        <h2 className="font-data m-0 whitespace-nowrap text-[0.73rem] font-medium uppercase tracking-[0.3em] text-brass">
+          Focus
+        </h2>
+        <span className="h-px flex-1 bg-edge" />
       </div>
 
-      {/* Headline */}
-      <h1 className="text-5xl sm:text-7xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-green-300 to-emerald-400 mb-4 text-center leading-tight">
-        Cameron Morales
-      </h1>
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] gap-px border border-edge bg-edge">
+        {focus.map((f) => (
+          <div key={f.key} className="bg-panel px-5 py-4">
+            <h3 className="font-data m-0 mb-2 text-[0.63rem] font-medium uppercase tracking-[0.2em] text-brass">
+              {f.key}
+            </h3>
+            <p className="m-0 text-[0.92rem] text-[#cfcabf]">{f.value}</p>
+          </div>
+        ))}
+      </div>
 
-      {/* Subtext */}
-      <p className="text-green-300 text-lg sm:text-xl text-center max-w-md mb-3">
-        Something great is coming. Even Kermit is excited.
-      </p>
-      <p className="text-green-600 text-sm text-center italic mb-8">
-        &ldquo;It&apos;s not easy being green... but it&apos;s worth it.&rdquo;
-      </p>
+      {/* Status */}
+      <div className="mt-[3.4rem] mb-6 flex items-center gap-4">
+        <h2 className="font-data m-0 whitespace-nowrap text-[0.73rem] font-medium uppercase tracking-[0.3em] text-brass">
+          Status
+        </h2>
+        <span className="h-px flex-1 bg-edge" />
+      </div>
+
+      <div className="border border-edge border-l-2 border-l-patina bg-panel px-6 py-5">
+        <h3 className="font-display m-0 mb-1 text-[1.1rem] font-semibold text-paper">
+          Portfolio in progress
+        </h3>
+        <p className="m-0 text-[0.92rem] text-[#cfcabf]">
+          Selected work and a collaborative pixel-canvas project are on the way. The
+          full record is on the resume in the meantime.
+        </p>
+      </div>
 
       <a
         href="/resume"
-        className="mt-2 px-6 py-3 bg-green-600 hover:bg-green-500 text-white font-semibold rounded-full transition-colors duration-200 text-sm tracking-wide"
+        className="font-data mt-10 inline-block border border-brass px-6 py-3 text-[0.73rem] uppercase tracking-[0.2em] text-champagne no-underline transition-colors hover:bg-brass hover:text-ink"
       >
-        View Resume →
+        View Resume &rarr;
       </a>
     </main>
   );

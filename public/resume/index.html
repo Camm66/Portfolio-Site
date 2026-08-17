@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cameron Morales — Full-Stack Engineer</title>
+<meta name="description" content="Cameron Morales — full-stack and infrastructure engineer in Chicago. Six years building and instrumenting web systems end to end.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#121A2B;
+    --panel:#19233A;
+    --panel-edge:#26314C;
+    --brass:#C9963F;
+    --champagne:#E8CE96;
+    --slate:#8A97AE;
+    --paper:#F2EDE3;
+    --patina:#6FA8A0;
+
+    --display:"Bodoni Moda", Georgia, serif;
+    --body:"IBM Plex Sans", system-ui, sans-serif;
+    --data:"IBM Plex Mono", ui-monospace, monospace;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--body);
+    font-weight:300;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .sheet{
+    max-width:60rem;
+    margin:0 auto;
+    padding:clamp(1.5rem,5vw,4.5rem) clamp(1.1rem,4vw,3rem) 5rem;
+  }
+
+  /* ---------- back link ---------- */
+  .back{
+    display:inline-block;
+    font-family:var(--data);
+    font-size:.72rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--slate);
+    text-decoration:none;
+    margin-bottom:1.6rem;
+  }
+  .back:hover{color:var(--champagne);}
+
+  /* ---------- nameplate ---------- */
+  .plate{
+    border:1px solid var(--panel-edge);
+    border-top:2px solid var(--brass);
+    background:linear-gradient(180deg,#1C2740 0%,#161F33 100%);
+    padding:clamp(1.6rem,4vw,2.8rem);
+    position:relative;
+  }
+  .plate::after{
+    content:"";
+    position:absolute; inset:auto 0 0 0; height:1px;
+    background:linear-gradient(90deg,transparent,var(--brass),transparent);
+    opacity:.35;
+  }
+  .plate h1{
+    font-family:var(--display);
+    font-weight:400;
+    font-size:clamp(2.3rem,7vw,4.4rem);
+    line-height:1.02;
+    letter-spacing:.02em;
+    margin:0;
+    color:var(--paper);
+  }
+  .plate h1 em{
+    font-style:italic;
+    color:var(--champagne);
+  }
+  .trade{
+    font-family:var(--data);
+    font-size:.72rem;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--brass);
+    margin:0 0 1.1rem;
+  }
+  .wires{
+    margin:1.7rem 0 0;
+    padding:1.1rem 0 0;
+    border-top:1px solid var(--panel-edge);
+    display:flex;
+    flex-wrap:wrap;
+    gap:.5rem 1.6rem;
+    font-family:var(--data);
+    font-size:.79rem;
+    color:var(--slate);
+  }
+  .wires a{color:var(--champagne);text-decoration:none;border-bottom:1px solid rgba(232,206,150,.3);}
+  .wires a:hover{border-bottom-color:var(--champagne);}
+
+  /* ---------- section headings ---------- */
+  .rule{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    margin:3.4rem 0 1.5rem;
+  }
+  .rule h2{
+    font-family:var(--data);
+    font-size:.73rem;
+    font-weight:500;
+    letter-spacing:.3em;
+    text-transform:uppercase;
+    color:var(--brass);
+    margin:0;
+    white-space:nowrap;
+  }
+  .rule span{flex:1;height:1px;background:var(--panel-edge);}
+
+  .summary{
+    font-size:clamp(1rem,2.2vw,1.14rem);
+    color:#D8D3C8;
+    max-width:48rem;
+    margin:0;
+  }
+
+  /* ---------- career rail ---------- */
+  .rail{
+    position:relative;
+    padding-left:clamp(1.6rem,5vw,2.6rem);
+  }
+  .rail::before{
+    content:"";
+    position:absolute; left:.36rem; top:.7rem; bottom:.7rem;
+    width:1px;
+    background:linear-gradient(180deg,var(--brass),rgba(201,150,63,.25));
+  }
+  .tenure{
+    position:absolute;
+    left:0; top:0;
+    font-family:var(--data);
+    font-size:.68rem;
+    letter-spacing:.16em;
+    color:var(--slate);
+  }
+
+  .post{
+    position:relative;
+    background:var(--panel);
+    border:1px solid var(--panel-edge);
+    border-left:2px solid var(--brass);
+    padding:clamp(1.15rem,3vw,1.8rem);
+    margin-bottom:1.1rem;
+    transition:border-color .18s ease, transform .18s ease;
+  }
+  .post:hover{border-color:#33405F;border-left-color:var(--champagne);}
+  .post::before{
+    content:"";
+    position:absolute;
+    left:calc(-1 * clamp(1.6rem,5vw,2.6rem) + .12rem);
+    top:1.55rem;
+    width:.52rem;height:.52rem;
+    background:var(--brass);
+    transform:rotate(45deg);
+  }
+
+  .post-head{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:.4rem 1.2rem;
+    margin-bottom:.2rem;
+  }
+  .post-head h3{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(1.15rem,3vw,1.42rem);
+    margin:0;
+    color:var(--paper);
+    letter-spacing:.01em;
+  }
+  .span{
+    font-family:var(--data);
+    font-size:.73rem;
+    letter-spacing:.13em;
+    color:var(--slate);
+    white-space:nowrap;
+  }
+  .unit{
+    font-family:var(--data);
+    font-size:.71rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--patina);
+    margin:0 0 1rem;
+  }
+
+  .post ul{margin:0;padding:0;list-style:none;}
+  .post li{
+    position:relative;
+    padding-left:1.15rem;
+    margin-bottom:.72rem;
+    font-size:.945rem;
+    color:#CFCABF;
+  }
+  .post li:last-child{margin-bottom:0;}
+  .post li::before{
+    content:"";
+    position:absolute;left:0;top:.66em;
+    width:.36rem;height:1px;
+    background:var(--brass);
+  }
+  .post li b{
+    font-weight:500;
+    color:var(--champagne);
+    font-family:var(--data);
+    font-size:.9em;
+    letter-spacing:.02em;
+  }
+
+  /* ---------- readouts ---------- */
+  .readouts{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.5rem;
+    margin:0 0 1.05rem;
+  }
+  .gauge{
+    border:1px solid var(--panel-edge);
+    border-bottom:1px solid var(--brass);
+    background:rgba(201,150,63,.05);
+    padding:.5rem .8rem .45rem;
+    min-width:6.2rem;
+  }
+  .gauge .val{
+    display:block;
+    font-family:var(--display);
+    font-size:1.42rem;
+    font-weight:600;
+    color:var(--champagne);
+    line-height:1.1;
+  }
+  .gauge .key{
+    display:block;
+    font-family:var(--data);
+    font-size:.61rem;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--slate);
+    margin-top:.15rem;
+  }
+
+  /* ---------- skills ---------- */
+  .bank{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));
+    gap:1px;
+    background:var(--panel-edge);
+    border:1px solid var(--panel-edge);
+  }
+  .bay{background:var(--panel);padding:1.05rem 1.2rem;}
+  .bay h4{
+    font-family:var(--data);
+    font-size:.63rem;
+    font-weight:500;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--brass);
+    margin:0 0 .5rem;
+  }
+  .bay p{margin:0;font-size:.92rem;color:#CFCABF;}
+
+  /* ---------- footer blocks ---------- */
+  .block{
+    border:1px solid var(--panel-edge);
+    border-left:2px solid var(--patina);
+    background:var(--panel);
+    padding:1.15rem 1.4rem;
+  }
+  .block h3{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.1rem;
+    margin:0 0 .2rem;
+  }
+  .block p{margin:0;font-size:.92rem;color:#CFCABF;}
+  .block .span{display:block;margin-top:.3rem;}
+
+  /* ---------- entrance ---------- */
+  .lift{opacity:0;transform:translateY(10px);animation:lift .55s ease forwards;}
+  .lift:nth-of-type(2){animation-delay:.06s;}
+  .lift:nth-of-type(3){animation-delay:.12s;}
+  @keyframes lift{to{opacity:1;transform:none;}}
+
+  @media (prefers-reduced-motion:reduce){
+    .lift{animation:none;opacity:1;transform:none;}
+    .post{transition:none;}
+  }
+
+  @media print{
+    body{background:#fff;color:#111;}
+    .sheet{padding:0;max-width:none;}
+    .back{display:none;}
+    .post,.bay,.block,.plate{background:#fff;border-color:#bbb;}
+    .plate h1,.post-head h3,.block h3{color:#111;}
+    .post li,.bay p,.block p,.summary{color:#333;}
+    .gauge .val,.plate h1 em,.post li b{color:#8a6520;}
+    .lift{animation:none;opacity:1;transform:none;}
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+
+  <a class="back" href="/">&larr; Back to home</a>
+
+  <header class="plate lift">
+    <p class="trade">Full-Stack &nbsp;/&nbsp; Infrastructure</p>
+    <h1>Cameron <em>Morales</em></h1>
+    <div class="wires">
+      <span>Chicago, IL</span>
+      <a href="mailto:cam.morales93@gmail.com">cam.morales93@gmail.com</a>
+      <a href="tel:+17088450107">(708) 845-0107</a>
+      <a href="https://github.com/camm66">github.com/camm66</a>
+      <a href="https://www.cameronmorales.com">cameronmorales.com</a>
+    </div>
+  </header>
+
+  <div class="rule"><h2>Signal</h2><span></span></div>
+  <p class="summary lift">
+    Six years building and instrumenting web systems end to end — from React and Next.js
+    surfaces down through Redis caching layers, Kubernetes deployments, and the CI/CD
+    pipelines that carry them. I tend to own the parts nobody wants to own, then make
+    them measurably faster.
+  </p>
+
+  <div class="rule"><h2>Service Record</h2><span></span></div>
+  <div class="rail">
+    <span class="tenure"></span>
+
+    <article class="post">
+      <div class="post-head">
+        <h3>Software Engineer, Web Applications</h3>
+        <span class="span">2024 — Present</span>
+      </div>
+      <p class="unit">Vail Systems · Prosodica · Level II → III</p>
+
+      <div class="readouts">
+        <div class="gauge"><span class="val">2×</span><span class="key">Pipeline speed</span></div>
+        <div class="gauge"><span class="val">25%</span><span class="key">Throughput gain</span></div>
+      </div>
+
+      <ul>
+        <li>Own the application's data caching architecture — in-memory and Redis-clustered layers that keep database load off the hot path under production traffic.</li>
+        <li>Cut CI/CD pipeline runtime <b>in half</b> by reworking Jenkins/CloudBees build and deployment stages.</li>
+        <li>Drove team-wide adoption of AI-assisted development with Cursor and Claude Code, contributing to a <b>25% throughput increase</b> last quarter.</li>
+        <li>Introduced and own SonarQube static analysis, wiring code-quality and security gates directly into the development workflow.</li>
+        <li>Stood up Matomo as the company's UX analytics platform, giving design teams self-serve insight into real user behavior.</li>
+        <li>Led an experimental SymTrain integration, prototyping the bridge between the product and third-party agent-training workflows.</li>
+        <li>Built the project's first end-to-end testing platform from nothing.</li>
+      </ul>
+    </article>
+
+    <article class="post">
+      <div class="post-head">
+        <h3>Software Engineer</h3>
+        <span class="span">2023 — 2024</span>
+      </div>
+      <p class="unit">Vail Systems · Telekit</p>
+      <ul>
+        <li>Contributed to core feature design on a greenfield telephony product, working with product and engineering stakeholders to shape technical direction.</li>
+      </ul>
+    </article>
+
+    <article class="post">
+      <div class="post-head">
+        <h3>Test &amp; Infrastructure Engineer</h3>
+        <span class="span">2020 — 2023</span>
+      </div>
+      <p class="unit">Vail Systems · Level I → II</p>
+
+      <div class="readouts">
+        <div class="gauge"><span class="val">10×</span><span class="key">Faster test runs</span></div>
+      </div>
+
+      <ul>
+        <li>Designed an internal test scheduler that parallelized and orchestrated execution, cutting total test runtime <b>10×</b>.</li>
+        <li>Built end-to-end and SMS load-testing suites for the FreeClimb API, covering high-traffic communications services.</li>
+        <li>Pioneered grammar testing across the organization — a new QA practice that was adopted company-wide.</li>
+        <li>Ran E2E, load, and high-availability testing for multiple APIs and IVR systems at production scale.</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="rule"><h2>Instruments</h2><span></span></div>
+  <div class="bank">
+    <div class="bay"><h4>Languages</h4><p>Python · TypeScript · JavaScript</p></div>
+    <div class="bay"><h4>Interface</h4><p>React · Next.js</p></div>
+    <div class="bay"><h4>Services</h4><p>GraphQL · REST</p></div>
+    <div class="bay"><h4>Infrastructure</h4><p>Docker · Kubernetes · Helm · Jenkins / CloudBees</p></div>
+    <div class="bay"><h4>Data &amp; Caching</h4><p>Redis — clustered and in-memory</p></div>
+    <div class="bay"><h4>Quality</h4><p>SonarQube · Matomo · E2E, load &amp; HA testing</p></div>
+    <div class="bay"><h4>AI-Assisted Development</h4><p>Cursor · Claude Code</p></div>
+    <div class="bay"><h4>Working With</h4><p>GitLab · Jira · Confluence</p></div>
+  </div>
+
+  <div class="rule"><h2>Training</h2><span></span></div>
+  <div class="block">
+    <h3>M.S. Computer Science</h3>
+    <p>DePaul University</p>
+    <span class="span">Conferred 2019</span>
+  </div>
+
+</main>
+</body>
+</html>
